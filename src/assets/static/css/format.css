@@ -1,0 +1,14 @@
+html {
+  background-color: #232323;
+}
+
+input::placeholder {
+  font-family: "FontAwesome", "Nunito";
+  color: lightgrey;
+}
+
+header {
+  background-color: rgba(16 18 27 / 40%);
+  -webkit-backdrop-filter: blur(20px);
+  backdrop-filter: blur(20px);
+}
