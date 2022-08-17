@@ -13,6 +13,9 @@ module.exports = {
       height: {
         22: "5.3rem",
       },
+      colors: {
+        hueso: "#FAFAF2",
+      },
     },
   },
   plugins: [require("flowbite/plugin")],

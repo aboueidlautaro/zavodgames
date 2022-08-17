@@ -3,13 +3,16 @@ import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <header className="top-0 sticky backdrop-blur-xl">
+    <header className="top-0 sticky backdrop-blur-xl z-[10000]">
       <div className="w-full h-22  text-white font-nunito-">
         <div className="h-22 w-full flex justify-around items-center">
           <div>
-            <h2 className="text-white font-extrabold font-bebas tracking-widest text-2xl">
-              ZVDGames
-            </h2>
+            <Link
+              className="text-white font-extrabold font-bebas tracking-widest text-2xl"
+              to="/"
+            >
+              <h2>ZVDGames</h2>
+            </Link>
           </div>
           <div>
             <input

@@ -1,14 +1,32 @@
 html {
-  background-color: #232323;
+  background-color: rgb(35, 35, 35);
 }
 
 input::placeholder {
   font-family: "FontAwesome", "Nunito";
   color: lightgrey;
 }
-
-header {
-  background-color: rgba(16 18 27 / 40%);
-  -webkit-backdrop-filter: blur(20px);
+#asidemenu-container {
+  background: rgba(22, 21, 21, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.37);
   backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+header {
+  background: rgba(22, 21, 21, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+#divisor {
+  background-image: url("https://www.amd.com/system/files/2020-05/497354-dirt5-screenshot-norway-4-1260x709.jpg");
+  background-position: center;
+  background-size: cover;
+  background-image: linear-gradient(
+      to bottom,
+      rgba(35, 35, 35, 0.75) 0%,
+      rgba(35, 35, 35, 1) 50%,
+      rgba(35, 35, 35, 1) 100%
+    ),
+    url("https://www.amd.com/system/files/2020-05/497354-dirt5-screenshot-norway-4-1260x709.jpg");
 }
