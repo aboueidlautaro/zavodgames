@@ -4,6 +4,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./assets/routes/Home";
 import Login from "./assets/routes/Login";
 import Register from "./assets/routes/Register";
+import TestAPI from "./assets/routes/TestAPI";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
         <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
+        <Route path="test" element={<TestAPI />} />
       </Routes>
     </Router>
   );
