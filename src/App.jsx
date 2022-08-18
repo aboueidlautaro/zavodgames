@@ -6,6 +6,8 @@ import Login from "./assets/routes/Login";
 import Register from "./assets/routes/Register";
 import TestAPI from "./assets/routes/TestAPI";
 
+import GamePage from "./assets/routes/GamePage";
+
 function App() {
   return (
     <Router>
@@ -15,6 +17,7 @@ function App() {
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
         <Route path="test" element={<TestAPI />} />
+        <Route path="games/:slug" element={<GamePage />} />
       </Routes>
     </Router>
   );
