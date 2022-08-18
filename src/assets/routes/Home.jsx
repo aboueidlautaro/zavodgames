@@ -1,5 +1,6 @@
 import React from "react";
 import AsideMenu from "../components/AsideMenu";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
@@ -9,7 +10,12 @@ function Home() {
           <div>
             <AsideMenu />
           </div>
-
+          <Link
+            className="bg-white text-black text-xl h-12 text-center"
+            to="/test"
+          >
+            APRETA ACÁ
+          </Link>
           <div className="flex col-span-4">
             <div className="h-screen text-hueso m-3 font-nunito">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
