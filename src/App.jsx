@@ -8,6 +8,7 @@ import Register from "./assets/routes/Register";
 import GamePage from "./assets/routes/GamePage";
 import SearchPage from "./assets/routes/SearchPage";
 import NotFound from "./assets/routes/NotFound";
+import AsideMenuResponsive from "./assets/components/AsideMenuResponsive";
 
 function App() {
   return (
