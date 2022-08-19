@@ -20,13 +20,13 @@ function GamesAPISearch({ results = [] }) {
         const date = value.released;
         return (
           <div
-            className="relative hover:z-[1000] hover:transition-all transition-all gap-5 mb-2 mx-auto z-0"
+            className="relative w-full hover:z-[1000] hover:transition-all transition-all gap-5 mb-2 mx-auto z-0"
             key={index}
           >
             <div
               id="applyBlur"
-              className="card text-center text-hueso w-96 sm:w-60 bg-red-200 h-auto gap-5 rounded-md pb-2 hover:relative sm:hover:absolute
-              sm:hover:translate-x-[-8rem] m-2"
+              className="card text-center text-hueso w-11/12 sm:w-60 bg-red-200 h-auto gap-5 rounded-md pb-2 hover:relative sm:hover:absolute
+              sm:hover:translate-x-[-8rem] m-2 mx-auto"
             >
               <img
                 className="sm:h-36 w-full object-cover object-center rounded-t-md "
