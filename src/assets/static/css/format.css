@@ -30,3 +30,9 @@ header {
     ),
     url("https://www.amd.com/system/files/2020-05/497354-dirt5-screenshot-norway-4-1260x709.jpg");
 }
+#applyBlur {
+  background: rgba(22, 21, 21, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}

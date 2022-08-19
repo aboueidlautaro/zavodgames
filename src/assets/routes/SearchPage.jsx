@@ -1,10 +1,9 @@
 import React from "react";
 import AsideMenu from "../components/AsideMenu";
-import { Link } from "react-router-dom";
-import GamesAPI from "../components/GamesAPI";
-import FetchAPI from "../components/FetchAPI";
 
-function Home() {
+import FetchAPISearch from "../components/FetchAPISearch";
+
+function SearchPage() {
   return (
     <>
       <div id="divisor" className="w-full ">
@@ -14,7 +13,7 @@ function Home() {
               <AsideMenu />
             </div>
 
-            <FetchAPI />
+            <FetchAPISearch />
           </div>
         </div>
       </div>
@@ -22,4 +21,4 @@ function Home() {
   );
 }
 
-export default Home;
+export default SearchPage;

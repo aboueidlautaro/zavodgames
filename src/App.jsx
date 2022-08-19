@@ -4,9 +4,10 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Home from "./assets/routes/Home";
 import Login from "./assets/routes/Login";
 import Register from "./assets/routes/Register";
-import TestAPI from "./assets/routes/TestAPI";
 
 import GamePage from "./assets/routes/GamePage";
+import SearchPage from "./assets/routes/SearchPage";
+import NotFound from "./assets/routes/NotFound";
 
 function App() {
   return (
@@ -16,8 +17,9 @@ function App() {
         <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
         <Route path="register" element={<Register />} />
-        <Route path="test" element={<TestAPI />} />
+        <Route path="search/:search" element={<SearchPage />} />
         <Route path="games/:slug" element={<GamePage />} />
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

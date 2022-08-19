@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 function AsideMenu() {
   return (
     <>
-      <aside className="top-24 sticky col-span-1 text-hueso">
+      <aside className="hidden md:inline-block top-24 sticky col-span-1 text-hueso">
         <div
           id="asidemenu-container"
           className="w-56 min-h-[600px] h-auto m-3 rounded-md backdrop-blur-xl "

@@ -16,7 +16,7 @@ function GamesAPI({ results = [] }) {
       {results.map((value, index) => {
         return (
           <div key={index}>
-            <div className="text-center text-hueso">
+            <div className="text-center text-hueso w-64 bg-red-200">
               <Link to={`/games/${value.slug}`}>
                 <h2>{value.name}</h2>
               </Link>
