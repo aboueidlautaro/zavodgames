@@ -13,6 +13,7 @@ function App() {
   return (
     <Router>
       <Navbar />
+      <AsideMenuResponsive />
       <Routes path="/">
         <Route index element={<Home />} />
         <Route path="login" element={<Login />} />
