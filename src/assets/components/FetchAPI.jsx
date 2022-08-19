@@ -7,9 +7,11 @@ function FetchAPI() {
   const [games, setGames] = useState([]);
   const [prev, setPrev] = useState({});
   const [next, setNext] = useState({});
+  const [loading, setLoading] = useState(true);
   const [search, setSearch] = useState("");
+  const [errorMessage, setErrorMessage] = useState("");
   const initialUrl =
-    "https://api.rawg.io/api/games?key=2173826c4a9a4f7fabc6bcfdd67008e7&page_size=20";
+    "https://api.rawg.io/api/games?key=2173826c4a9a4f7fabc6bcfdd67008e7&page_size=24";
 
   const ApiData = (url) => {
     fetch(url)
@@ -18,9 +20,10 @@ function FetchAPI() {
         setGames(data.results);
         setPrev(data.previous);
         setNext(data.next);
+        setLoading(false);
       })
       .catch((error) => {
-        console.log(error);
+        setErrorMessage("There is no result for your search.");
       });
   };
 
@@ -49,25 +52,39 @@ function FetchAPI() {
   return (
     <>
       <div className="flex flex-col mx-auto">
-        <div>
-          <Pagination
-            prev={prev}
-            next={next}
-            onPrevious={onPrevious}
-            onNext={onNext}
-          />
-        </div>
-        <div className="w-full m-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-          <GamesAPI results={results} />
-        </div>
-        <div>
-          <Pagination
-            prev={prev}
-            next={next}
-            onPrevious={onPrevious}
-            onNext={onNext}
-          />
-        </div>
+        {loading ? (
+          <h2 className=" h-full w-full flex justify-center items-center text-2xl text-hueso">
+            Loading games...
+          </h2>
+        ) : (
+          <div>
+            <div>
+              <Pagination
+                prev={prev}
+                next={next}
+                onPrevious={onPrevious}
+                onNext={onNext}
+              />
+            </div>
+            <div className="mx-auto w-full m-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md2:grid-cols-4">
+              <GamesAPI
+                results={results}
+                loading={loading}
+                errorMessage={errorMessage}
+                prev={prev}
+                next={next}
+              />
+            </div>
+            <div>
+              <Pagination
+                prev={prev}
+                next={next}
+                onPrevious={onPrevious}
+                onNext={onNext}
+              />
+            </div>
+          </div>
+        )}
       </div>
     </>
   );

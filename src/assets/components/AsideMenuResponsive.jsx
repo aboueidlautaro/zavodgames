@@ -1,15 +1,18 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-function AsideMenu() {
+function AsideMenuResponsive() {
   return (
     <>
-      <aside className="hidden sm2:block top-24 sticky col-span-1 text-hueso">
+      <aside
+        id="asideresponsive"
+        className="hidden sm2:hidden top-36 text-hueso z-[9999] sticky backdrop-blur-xl"
+      >
         <div
           id="asidemenu-container"
-          className="w-56 min-h-[600px] h-auto m-3 rounded-md backdrop-blur-xl "
+          className="w-full text-center min-h-[600px] h-auto  flex flex-col rounded-md items-center justify-center backdrop-blur-xl "
         >
-          <div className="p-5 flex flex-col gap-y-2">
+          <div className="m-5 h-full p-5 flex flex-col gap-y-2 w-2/12 items-center justify-center">
             <Link className="text-2xl font-bold" to="/">
               Home
             </Link>
@@ -43,4 +46,4 @@ function AsideMenu() {
   );
 }
 
-export default AsideMenu;
+export default AsideMenuResponsive;

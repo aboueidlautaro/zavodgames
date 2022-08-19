@@ -7,21 +7,32 @@ import { faGamepad } from "@fortawesome/free-solid-svg-icons";
 import { faApple } from "@fortawesome/free-brands-svg-icons";
 import { faAndroid } from "@fortawesome/free-brands-svg-icons";
 import { faLinux } from "@fortawesome/free-brands-svg-icons";
-
+import moment from "moment";
+import "moment/locale/es";
 import { BrowserRouter as Router, Link } from "react-router-dom";
+import DivDetailsHover from "./DivDetailsHover";
 
 function GamesAPI({ results = [] }) {
   return (
     <>
       {results.map((value, index) => {
+        const date = value.released;
         return (
-          <div key={index}>
-            <div className="text-center text-hueso w-64 bg-red-200">
-              <Link to={`/games/${value.slug}`}>
-                <h2>{value.name}</h2>
-              </Link>
-              <small>{value.released}</small>
-              <div className="flex justify-center text-xs">
+          <div
+            className="relative hover:z-[1000] hover:transition-all transition-all gap-5 mb-2 mx-auto z-0"
+            key={index}
+          >
+            <div
+              id="applyBlur"
+              className="card text-center text-hueso w-96 sm:w-60 bg-red-200 h-auto gap-5 rounded-md pb-2 hover:relative sm:hover:absolute
+              sm:hover:translate-x-[-8rem] m-2"
+            >
+              <img
+                className="sm:h-36 w-full object-cover object-center rounded-t-md "
+                src={value.background_image}
+                alt=""
+              />
+              <div className="flex justify-center p-2 text-sm">
                 {value.platforms.map((valor, index) => {
                   return (
                     <div key={index}>
@@ -86,6 +97,62 @@ function GamesAPI({ results = [] }) {
                     </div>
                   );
                 })}
+              </div>
+              <Link to={`/games/${value.slug}`}>
+                <h2 className="mx-auto w-11/12 text-xl font-bold font-josefin">
+                  {value.name}
+                </h2>
+              </Link>
+              <div className=" flex justify-between px-4">
+                <span className="bg-black/40 px-2 py-1 rounded-md  text-xs text-white/80">
+                  Valoration
+                </span>
+                {(() => {
+                  if (value.metacritic > 75) {
+                    return (
+                      <span className="rounded-md px-2 py-1 text-xs border-2 border-green-500">
+                        {value.metacritic}
+                      </span>
+                    );
+                  } else if (value.metacritic > 50) {
+                    return (
+                      <span className="rounded-md px-2 py-1 text-xs border-2 border-yellow-500">
+                        {value.metacritic}
+                      </span>
+                    );
+                  } else {
+                    return (
+                      <span className="rounded-md px-2 py-1 text-xs border-2 border-red-500">
+                        {value.metacritic === null ? "0" : value.metacritic}
+                      </span>
+                    );
+                  }
+                })()}
+              </div>
+              <div className="hidden cardtext px-4">
+                <DivDetailsHover
+                  title="Release date"
+                  value={moment(date).format("LL")}
+                />
+                <div className="flex justify-between">
+                  <span className="bg-black/40 px-2 py-1 rounded-md  text-xs text-white/80">
+                    Genres
+                  </span>
+                  <div>
+                    {value.genres.map((generos, index) => {
+                      return (
+                        <>
+                          <span
+                            key={index}
+                            className="inline m-1 text-xs text-white underline"
+                          >
+                            {generos.name}
+                          </span>
+                        </>
+                      );
+                    })}
+                  </div>
+                </div>
               </div>
             </div>
           </div>

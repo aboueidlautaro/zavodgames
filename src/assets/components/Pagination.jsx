@@ -10,7 +10,7 @@ const Pagination = ({ prev, next, onPrevious, onNext }) => {
 
   return (
     <nav>
-      <ul className="text-center my-4 text-hueso font-nunito">
+      <ul className="text-center mt-5 text-hueso font-nunito">
         {prev ? (
           <li className="inline-block ">
             <button

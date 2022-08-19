@@ -3,13 +3,15 @@ import AsideMenu from "../components/AsideMenu";
 import { Link } from "react-router-dom";
 import GamesAPI from "../components/GamesAPI";
 import FetchAPI from "../components/FetchAPI";
+import AsideMenuResponsive from "../components/AsideMenuResponsive";
 
 function Home() {
   return (
     <>
-      <div id="divisor" className="w-full ">
-        <div className="w-10/12 mx-auto">
-          <div className="flex flexjustify-center">
+      <AsideMenuResponsive />
+      <div id="divisor" className="w-full h-screen">
+        <div className="w-full md:w-10/12 mx-auto">
+          <div className="flex justify-center">
             <div>
               <AsideMenu />
             </div>
@@ -18,6 +20,7 @@ function Home() {
           </div>
         </div>
       </div>
+      <div className="h-screen w-full" />
     </>
   );
 }

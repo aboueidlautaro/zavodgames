@@ -28,9 +28,25 @@ header {
       rgba(35, 35, 35, 1) 50%,
       rgba(35, 35, 35, 1) 100%
     ),
-    url("https://www.amd.com/system/files/2020-05/497354-dirt5-screenshot-norway-4-1260x709.jpg");
+    url("../images/fondo3.jpg");
 }
 #applyBlur {
+  background: rgba(22, 21, 21, 0.4);
+  box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.37);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+}
+
+.card .cardtext {
+  visibility: hidden;
+}
+
+.card:hover .cardtext {
+  visibility: visible;
+  display: block !important;
+  transition-delay: 0.3s;
+}
+#asideresponsive {
   background: rgba(22, 21, 21, 0.4);
   box-shadow: 0 8px 32px 0 rgba(36, 36, 36, 0.37);
   backdrop-filter: blur(20px);

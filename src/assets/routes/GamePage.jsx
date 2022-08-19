@@ -7,7 +7,7 @@ function GamePage() {
   const { slug } = useParams();
   const [indGame, setIndGame] = useState([]);
 
-  const gameUrl = `https://api.rawg.io/api/games/${slug}?key=2173826c4a9a4f7fabc6bcfdd67008e7&page_size=20`;
+  const gameUrl = `https://api.rawg.io/api/games/${slug}?key=2173826c4a9a4f7fabc6bcfdd67008e7&page_size=24`;
 
   const gameData = (url) => {
     fetch(url)
@@ -29,10 +29,10 @@ function GamePage() {
     <>
       <div id="divisor" className="w-full ">
         <div className="grid grid-cols-5 w-5/6 mx-auto">
-          <div className="col-span-1">
+          <div className="md:col-span-1">
             <AsideMenu />
           </div>
-          <div className="col-span-4 p-5">
+          <div className="col-span-5 md:col-span-4 p-5">
             <IndividualGame results={results} />
           </div>
         </div>

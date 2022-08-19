@@ -4,6 +4,13 @@ module.exports = {
     "node_modules/flowbite-react/**/*.{js,jsx,ts,tsx}",
   ],
   theme: {
+    screens: {
+      sm: "576px",
+      sm2: "1196px",
+      md: "960px",
+      md2: "1485px",
+      lg: "1440px",
+    },
     extend: {
       fontFamily: {
         nunito: ["Nunito", "sans-serif"],
