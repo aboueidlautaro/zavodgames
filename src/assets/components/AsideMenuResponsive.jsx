@@ -6,11 +6,11 @@ function AsideMenuResponsive() {
     <>
       <aside
         id="asideresponsive"
-        className="hidden sm2:hidden top-36 text-hueso z-[9999] sticky backdrop-blur-xl"
+        className="animate__animated hidden sm2:hidden w-full top-36 text-hueso z-[9999] fixed backdrop-blur-xl"
       >
         <div
           id="asidemenu-container"
-          className="w-full text-center min-h-[600px] h-auto  flex flex-col rounded-md items-center justify-center backdrop-blur-xl "
+          className="w-full text-center min-h-[600px] h-auto flex flex-col rounded-md items-center justify-center backdrop-blur-xl "
         >
           <div className="m-5 h-full p-5 flex flex-col gap-y-2 w-2/12 items-center justify-center">
             <Link className="text-2xl font-bold" to="/">

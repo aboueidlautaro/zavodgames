@@ -26,18 +26,9 @@ function GamePage() {
     gameData(gameUrl);
   }, []);
   return (
-    <>
-      <div id="divisor" className="w-full ">
-        <div className="grid grid-cols-5 w-5/6 mx-auto">
-          <div className="md:col-span-1">
-            <AsideMenu />
-          </div>
-          <div className="col-span-5 md:col-span-4 p-5">
-            <IndividualGame results={results} />
-          </div>
-        </div>
-      </div>
-    </>
+    <div>
+      <IndividualGame results={results} />
+    </div>
   );
 }
 

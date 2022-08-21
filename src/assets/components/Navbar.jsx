@@ -4,7 +4,17 @@ import { Link, useNavigate } from "react-router-dom";
 function Navbar() {
   const onClick = () => {
     const aside = window.document.getElementById("asideresponsive");
-    aside.classList.toggle("hidden");
+    if (aside.classList.contains("hidden")) {
+      aside.classList.remove("hidden");
+      aside.classList.remove("animate__fadeOutUp");
+      aside.classList.add("animate__fadeInDown");
+    } else {
+      aside.classList.remove("animate__fadeInDown");
+      aside.classList.add("animate__fadeOutUp");
+      setTimeout(() => {
+        aside.classList.add("hidden");
+      }, 500);
+    }
   };
 
   const ref = useRef();
@@ -27,7 +37,10 @@ function Navbar() {
   };
 
   return (
-    <header className="top-0 sticky backdrop-blur-xl z-[10000]">
+    <header
+      id="applyBlur"
+      className="top-0 w-full fixed backdrop-blur-xl z-[10000]"
+    >
       <div className="w-full h-36 sm2:h-22  text-white font-nunito">
         <div className="h-36 sm2:h-22 w-full flex flex-col sm2:flex-row justify-center sm2:justify-around items-center text-center">
           <div className="w-1/4">

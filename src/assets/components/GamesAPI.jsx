@@ -103,8 +103,8 @@ function GamesAPI({ results = [] }) {
                   {value.name}
                 </h2>
               </Link>
-              <div className=" flex justify-between px-4">
-                <span className="bg-black/40 px-2 py-1 rounded-md  text-xs text-white/80">
+              <div className=" flex justify-between px-4 mt-4">
+                <span className="bg-black/20 px-2 py-1 rounded-md  text-xs text-white/80">
                   Valoration
                 </span>
                 {(() => {
@@ -135,7 +135,7 @@ function GamesAPI({ results = [] }) {
                   value={moment(date).format("LL")}
                 />
                 <div className="flex justify-between">
-                  <span className="bg-black/40 px-2 py-1 rounded-md  text-xs text-white/80">
+                  <span className="bg-black/20 px-2 py-1 rounded-md  text-xs text-white/80">
                     Genres
                   </span>
                   <div>
