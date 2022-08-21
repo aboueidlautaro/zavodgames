@@ -66,7 +66,7 @@ function FetchAPI() {
                 onNext={onNext}
               />
             </div>
-            <div className="w-full my-4 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md2:grid-cols-4">
+            <div className="w-full mt-5 grid gap-x-5 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 md2:grid-cols-4">
               <GamesAPI
                 results={results}
                 loading={loading}

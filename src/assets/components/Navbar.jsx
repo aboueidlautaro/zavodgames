@@ -59,7 +59,7 @@ function Navbar() {
               </form>
               <button
                 id="btnHamburguer"
-                className="ml-3 p-3 bg-hueso text-black rounded-md rotate-90"
+                className="sm2:hidden ml-3 p-3 bg-hueso text-black rounded-md rotate-90"
                 onClick={onClick}
               >
                 III
