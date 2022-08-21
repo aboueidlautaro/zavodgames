@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 import AsideMenu from "./AsideMenu";
 import { Markup } from "interweave";
+import ImageModal from "./ImageModal";
 
 function IndividualGame({ results = [] }) {
   const { slug } = useParams();
@@ -66,13 +67,7 @@ function IndividualGame({ results = [] }) {
                   <section className="container-gallery-game w-11/12 sm2:w-10/12">
                     <div className="container-galley-game-images gap-2 rounded-xl">
                       {screenData.map((value) => {
-                        return (
-                          <img
-                            key={value.id}
-                            className="image-gallery-game rounded-xl"
-                            src={value.image}
-                          ></img>
-                        );
+                        return <ImageModal src={value.image} />;
                       })}
                     </div>
                   </section>
