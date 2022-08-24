@@ -33,7 +33,7 @@ function ImageModal(props) {
             <img className="h-auto w-11/12 object-cover" src={props.src} />
             <button
               onClick={handleClose}
-              className="active:bg-gray-900 hover:opacity-70 transition-all delay-50 absolute top-4 -translate-x-16 sm:-translate-x-24 sm2:-translate-x-20 md:-translate-x-28 lg:-translate-x-28 left-2/4 bg-gray-700 px-6 py-4 rounded-full"
+              className="hidden md2:inline-block active:bg-gray-900 hover:opacity-70 transition-all delay-50 absolute top-4 -translate-x-16 sm:-translate-x-24 sm2:-translate-x-20 md:-translate-x-28 lg:-translate-x-28 left-2/4 bg-gray-700 px-6 py-4 rounded-full"
             >
               Close
             </button>

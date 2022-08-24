@@ -3,12 +3,13 @@ import { Link, useParams } from "react-router-dom";
 import AsideMenu from "./AsideMenu";
 import { Markup } from "interweave";
 import ImageModal from "./ImageModal";
+import { Skeleton } from "@mui/material";
 
 function IndividualGame({ results = [] }) {
   const { slug } = useParams();
 
   const [screenData, setScreenData] = useState([]);
-  const [loading, setLoading] = useState(true);
+
   const [errorMessage, setErrorMessage] = useState("");
 
   const gameScreenshotsUrl = `https://api.rawg.io/api/games/${slug}/screenshots?key=2173826c4a9a4f7fabc6bcfdd67008e7`;
@@ -67,16 +68,22 @@ function IndividualGame({ results = [] }) {
                   <section className="container-gallery-game w-11/12 sm2:w-10/12">
                     <div className="container-galley-game-images gap-2 rounded-xl">
                       {screenData.map((value) => {
-                        return <ImageModal src={value.image} />;
+                        return <ImageModal key={value.id} src={value.image} />;
                       })}
                     </div>
                   </section>
                   <div className="w-9/12 mx-auto font-josefin">
                     <h3 className="text-4xl font-black">About</h3>
-                    <Markup
-                      className=" font-nunito text-xl text-justify"
-                      content={value.description}
-                    />
+                    {value.description ? (
+                      <Markup
+                        className=" font-nunito text-xl text-justify"
+                        content={value.description}
+                      />
+                    ) : (
+                      <Skeleton>
+                        <Markup className=" font-nunito text-xl text-justify" />
+                      </Skeleton>
+                    )}
                   </div>
                 </div>
               </div>

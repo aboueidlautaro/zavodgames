@@ -53,7 +53,7 @@ function FetchAPI() {
     <>
       <div className="flex flex-col mx-auto">
         {loading ? (
-          <h2 className=" h-full w-full flex justify-center items-center text-2xl text-hueso">
+          <h2 className="h-full w-full flex justify-center items-center text-2xl text-hueso">
             Loading games...
           </h2>
         ) : (

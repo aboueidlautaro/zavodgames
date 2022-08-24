@@ -1,7 +1,17 @@
 import React from "react";
 
 function Login() {
-  return <div>Login</div>;
+  const click = () => {
+    setTimeout(() => {
+      window.location.reload();
+    }, 1500);
+  };
+
+  return (
+    <div>
+      <button onClick={click}>asdasd</button>
+    </div>
+  );
 }
 
 export default Login;

@@ -12,20 +12,20 @@ import "moment/locale/es";
 import { Link } from "react-router-dom";
 import DivDetailsHover from "./DivDetailsHover";
 
-function GamesAPI({ results = [] }) {
+function GamesAPI({ results = [], loading }) {
   return (
     <>
       {results.map((value, index) => {
         const date = value.released;
         return (
           <div
-            className="relative w-full  hover:z-[1000] hover:transition-all transition-all gap-5 mb-2 mx-auto z-0"
-            key={index}
+            className="relative w-full  hover:z-[1000] hover:transition-all transition-all gap-5 mb-2 mx-auto z-0 "
+            key={value.id}
           >
             <div
               id="applyBlur"
               className="card text-center text-hueso w-11/12 sm:w-60 bg-red-200 h-auto gap-5 rounded-md pb-2 hover:relative sm:hover:absolute
-               m-2 mx-auto"
+               m-2 mx-auto "
             >
               <img
                 className="sm:h-36 w-full object-cover object-center rounded-t-md "
@@ -35,7 +35,7 @@ function GamesAPI({ results = [] }) {
               <div className="flex justify-center p-2 text-sm">
                 {value.platforms.map((valor, index) => {
                   return (
-                    <div key={index}>
+                    <div key={valor.id}>
                       {(() => {
                         switch (valor.platform.slug) {
                           case "xbox-series-x" ||
@@ -129,12 +129,12 @@ function GamesAPI({ results = [] }) {
                   }
                 })()}
               </div>
-              <div className="hidden cardtext px-4">
+              <div className="hidden cardtext px-4 animate__animated animate__fadeIn animate__fast">
                 <DivDetailsHover
                   title="Release date"
                   value={moment(date).format("LL")}
                 />
-                <div className="flex justify-between">
+                <div className="flex justify-between flex-wrap">
                   <span className="bg-black/20 px-2 py-1 rounded-md  text-xs text-white/80">
                     Genres
                   </span>
@@ -143,7 +143,7 @@ function GamesAPI({ results = [] }) {
                       return (
                         <>
                           <span
-                            key={index}
+                            key={generos.id}
                             className="inline m-1 text-xs text-white underline"
                           >
                             {generos.name}

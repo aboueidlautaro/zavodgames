@@ -10,7 +10,6 @@ import SearchPage from "./assets/routes/SearchPage";
 import NotFound from "./assets/routes/NotFound";
 import AsideMenuResponsive from "./assets/components/AsideMenuResponsive";
 import Margin from "./assets/components/Margin";
-import ImageModal from "./assets/components/ImageModal";
 
 function App() {
   return (
@@ -24,7 +23,7 @@ function App() {
         <Route path="register" element={<Register />} />
         <Route path="search/:search" element={<SearchPage />} />
         <Route path="games/:slug" element={<GamePage />} />
-        <Route path="test" element={<ImageModal />} />
+
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
