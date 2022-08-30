@@ -15,7 +15,7 @@ import DivDetailsHover from "./DivDetailsHover";
 function GamesAPI({ results = [], loading }) {
   return (
     <>
-      {results.map((value, index) => {
+      {results.map((value) => {
         const date = value.released;
         return (
           <div
@@ -33,7 +33,7 @@ function GamesAPI({ results = [], loading }) {
                 alt=""
               />
               <div className="flex justify-center p-2 text-sm">
-                {value.platforms.map((valor, index) => {
+                {value.platforms.map((valor) => {
                   return (
                     <div key={valor.id}>
                       {(() => {
@@ -139,7 +139,7 @@ function GamesAPI({ results = [], loading }) {
                     Genres
                   </span>
                   <div>
-                    {value.genres.map((generos, index) => {
+                    {value.genres.map((generos) => {
                       return (
                         <>
                           <span

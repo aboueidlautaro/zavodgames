@@ -1,5 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+// react icons
+import { GiShardSword } from "react-icons/gi";
+import { FaCar } from "react-icons/fa";
+import { BsFillPeopleFill } from "react-icons/bs";
+import { GiPotionBall } from "react-icons/gi";
+import { GiCardJoker } from "react-icons/gi";
+// font awesome icons
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faXbox } from "@fortawesome/free-brands-svg-icons";
+import { faDesktop } from "@fortawesome/free-solid-svg-icons";
+import { faPlaystation } from "@fortawesome/free-brands-svg-icons";
+import { faGamepad } from "@fortawesome/free-solid-svg-icons";
+import { faApple } from "@fortawesome/free-brands-svg-icons";
+import { faAndroid } from "@fortawesome/free-brands-svg-icons";
 
 function AsideMenu() {
   return (
@@ -18,22 +32,45 @@ function AsideMenu() {
             </Link>
             <section>
               <h2 className="text-2xl font-bold">Genres</h2>
-              <article className="flex flex-col">
-                <Link to="/">Action</Link>
-                <Link to="/">Racing</Link>
-                <Link to="/">Multiplayer</Link>
-                <Link to="/">RPG</Link>
-                <Link to="/">Cards</Link>
+              <article className="flex flex-col my-2 ml-3">
+                <Link className="flex items-center" to="/">
+                  <GiShardSword className="mr-1" /> Action
+                </Link>
+                <Link className="flex items-center" to="/">
+                  <FaCar className="mr-1" /> Racing
+                </Link>
+                <Link className="flex items-center" to="/">
+                  <BsFillPeopleFill className="mr-1" />
+                  Multiplayer
+                </Link>
+                <Link className="flex items-center" to="/">
+                  <GiPotionBall className="mr-1" />
+                  RPG
+                </Link>
+                <Link className="flex items-center" to="/">
+                  <GiCardJoker className="mr-1" />
+                  Cards
+                </Link>
               </article>
             </section>
             <section>
               <h2 className="text-2xl font-bold">Platforms</h2>
-              <article className="flex flex-col">
-                <Link to="/">PC</Link>
-                <Link to="/">Xbox</Link>
-                <Link to="/">Playstation</Link>
-                <Link to="/">Android</Link>
-                <Link to="/">iOS</Link>
+              <article className="flex flex-col my-2 ml-3">
+                <Link to="/">
+                  <FontAwesomeIcon icon={faDesktop} /> PC
+                </Link>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faXbox} /> Xbox
+                </Link>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faPlaystation} /> Playstation
+                </Link>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faAndroid} /> Android
+                </Link>
+                <Link to="/">
+                  <FontAwesomeIcon icon={faApple} /> iOS
+                </Link>
               </article>
             </section>
           </div>
